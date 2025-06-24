@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About | Nasab</title>
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans&family=Noto+Naskh+Arabic&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body {
+      font-family: 'Noto Sans', sans-serif;
+    }
+    .arabic {
+      font-family: 'Noto Naskh Arabic', serif;
+    }
+    body.dyslexic-mode {
+      font-family: 'OpenDyslexic', sans-serif;
+    }
+  </style>
+</head>
+
+<body class="bg-[#F5F5F5] text-gray-900 p-6 font-sans">
+
+  <!-- Header -->
+  <header class="bg-[#588B8B] text-white p-6 rounded shadow">
+    <div class="max-w-4xl mx-auto">
+      <h1 class="text-4xl font-bold tracking-wide">Nasab</h1>
+      <p class="mt-1 text-lg not-italic">About</p>
+    </div>
+  </header>
+
+  <!-- Navigation -->
+  <nav class="max-w-4xl mx-auto mt-4 mb-8 flex gap-6 text-lg font-semibold text-[#F0A7AD]">
+    <a href="index.html" class="underline">Home</a>
+    <a href="explore.html" class="underline">Explore a Text</a>
+    <a href="compare.html" class="underline">Compare Texts</a>
+    <a href="more-tools.html" class="underline">More Tools</a>
+    <label>
+      <input type="checkbox" id="dyslexiaToggle" />
+      Dyslexia-Friendly Font
+    </label>
+  </nav>
+
+  <!-- Main Content -->
+  <main class="max-w-4xl mx-auto space-y-10">
+
+    <!-- How to Use -->
+    <section class="bg-white text-[#588B8B] p-6 rounded shadow space-y-4">
+      <h2 class="text-xl font-semibold">About the Tool</h2>
+      <p><strong>Nasab</strong> is ...</p>
+      <ul class="list-disc list-inside space-y-1">
+      </ul>
+
+
+    </section>
+
+    <!-- Acknowledgments -->
+    <section class="bg-white text-[#588B8B] p-6 rounded shadow space-y-4">
+      <h2 class="text-xl font-semibold">Acknowledgments</h2>
+      <ul class="list-disc pl-6 space-y-2">
+        <li>
+          Nasab genealogies use Matteo Abrate's  
+          <a href="https://www.fourmilab.ch/documents/calendar/" class="underline text-blue-600 hover:text-blue-800" target="_blank">tangled tree visualization</a>.
+        </li>
+        <li>
+          The dyslexia-friendly font is Abbie Gonzalez's 
+          <a href="https://opendyslexic.org/about" class="underline text-blue-600 hover:text-blue-800" target="_blank">OpenDyslexic</a>.
+        </li>
+      </ul>
+    </section>
+
+    <!-- About Me -->
+    <section class="bg-white text-[#588B8B] p-6 rounded shadow space-y-4">
+      <h2 class="text-xl font-semibold">About Me</h2>
+      <p>
+        Created by Maggie Sager, a PhD candidate and historian of gender and Islamic law at NYU.
+      </p>
+    </section>
+
+  </main>
+
+  <!-- Dyslexia toggle behavior -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const toggle = document.getElementById("dyslexiaToggle");
+      if (toggle) {
+        toggle.addEventListener("change", function () {
+          document.body.classList.toggle("dyslexic-mode", toggle.checked);
+        });
+      }
+    });
+  </script>
+</body>
+</html>

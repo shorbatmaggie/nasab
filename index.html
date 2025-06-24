@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Nasab</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans&family=Noto+Naskh+Arabic&display=swap"
+    rel="stylesheet">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="inspector.css" />
+
+  <style>
+    body {
+      font-family: 'Noto Sans', sans-serif;
+      background-color: #F5F5F5;
+    }
+
+    .arabic {
+      font-family: 'Noto Naskh Arabic', serif;
+    }
+
+    body.dyslexic-mode {
+      font-family: 'OpenDyslexic', sans-serif;
+    }
+
+    header {
+      background-color: #588B8B;
+      color: white;
+    }
+
+    button {
+      background-color: #588B8B !important;
+      color: white !important;
+    }
+
+    section {
+      background-color: #FFFFFF !important;
+      color: #588B8B;
+    }
+
+    input,
+    select {
+      background-color: #F5F5F5 !important;
+    }
+
+    nav a,
+    nav label {
+      color: #F0A7AD !important;
+    }
+  </style>
+</head>
+
+<body class="p-6 font-sans">
+
+  <!-- Header -->
+  <header class="p-6 rounded shadow">
+    <div class="max-w-7xl mx-auto">
+      <h1 class="text-4xl font-bold tracking-wide">Nasab</h1>
+      <p class="mt-1 text-lg not-italic">A Genealogy Visualization Tool for Shāfiʿī Commentaries</p>
+    </div>
+  </header>
+
+  <!-- Navigation -->
+  <nav class="max-w-7xl mx-auto mt-4 mb-8 flex gap-4 text-lg font-semibold">
+    <a href="about.html" class="underline">About</a>
+    <a href="more-tools.html" class="underline">More Tools</a>
+    <label>
+      <input type="checkbox" id="dyslexia-toggle" />
+      Dyslexia-Friendly Font
+    </label>
+  </nav>
+
+  <!-- Welcome + Links -->
+  <section class="max-w-3xl mx-auto p-8 mb-8 bg-white rounded-xl shadow text-[#588B8B] text-center">
+    <h2 class="text-2xl font-bold mb-2">Welcome to Nasab</h2>
+    <p class="mb-4">
+      Visualize and compare the textual genealogy of legal commentaries from the Shāfiʿī <i>madhhab</i>.<br>
+      Choose an option below to get started:
+    </p>
+    <div class="flex justify-center gap-8">
+      <a href="explore.html" class="text-lg underline font-semibold">Explore a Text</a>
+      <a href="compare.html" class="text-lg underline font-semibold">Compare Multiple Texts</a>
+    </div>
+  </section>
+
+  <!-- Full Tree Visualization -->
+  <main id="chart-area" class="max-w-7xl mx-auto"></main>
+
+  <!-- Observable Runtime -->
+  <script type="module">
+    import define from "./index.js";
+    import { Runtime, Inspector } from "./runtime.js";
+    const runtime = new Runtime();
+    const main = runtime.module(define, name => {
+      if (name === undefined) return new Inspector(document.querySelector("#chart-area"));
+    // After your renderChart function is loaded/ready:
+      if (window.renderChart) {
+        document.querySelector("#chart-area").innerHTML = "";
+        document.querySelector("#chart-area").appendChild(window.renderChart(fullData));
+      }
+    });
+
+    document.getElementById("dyslexia-toggle").addEventListener("change", function () {
+        document.body.classList.toggle("dyslexic-mode", this.checked);
+
+        // 1. Update SVG <style> font-family
+        const font = this.checked ? "'OpenDyslexic', sans-serif" : "'Noto Sans', sans-serif";
+        document.querySelectorAll("#chart-area svg style").forEach(styleEl => {
+          styleEl.textContent = styleEl.textContent.replace(
+            /font-family:.*?;/,
+            `font-family: ${font};`
+          );
+        });
+
+        // 2. Remove/add .style.fontFamily on chart, svg, and <text> elements
+        const chart = document.querySelector("#chart-area > div");
+        if (chart) {
+          chart.style.fontFamily = this.checked ? "'OpenDyslexic', sans-serif" : "";
+          const svg = chart.querySelector("svg");
+          if (svg) {
+            svg.style.fontFamily = this.checked ? "'OpenDyslexic', sans-serif" : "";
+            svg.querySelectorAll("text").forEach(el => {
+              el.style.fontFamily = this.checked ? "'OpenDyslexic', sans-serif" : "";
+            });
+          }
+        }
+      });
+
+
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>More Tools | Nasab</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans&family=Noto+Naskh+Arabic&display=swap"
+        rel="stylesheet">
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="inspector.css" />
+
+    <style>
+        body {
+            font-family: 'Noto Sans', sans-serif;
+            background-color: #F5F5F5;
+        }
+
+        .arabic {
+            font-family: 'Noto Naskh Arabic', serif;
+        }
+
+        body.dyslexic-mode {
+            font-family: 'OpenDyslexic', sans-serif;
+        }
+
+        header {
+            background-color: #588B8B;
+            color: white;
+        }
+
+        button {
+            background-color: #588B8B !important;
+            color: white !important;
+        }
+
+        section {
+            background-color: #FFFFFF !important;
+            color: #588B8B;
+        }
+
+        input,
+        select {
+            background-color: #F5F5F5 !important;
+        }
+
+        nav a,
+        nav label {
+            color: #F0A7AD !important;
+        }
+    </style>
+</head>
+
+<body class="p-6 font-sans">
+
+    <!-- Header -->
+    <header class="p-6 rounded shadow">
+        <div class="max-w-7xl mx-auto">
+            <h1 class="text-4xl font-bold tracking-wide">Nasab</h1>
+            <p class="mt-1 text-lg not-italic">More Tools</p>
+            </p>
+        </div>
+    </header>
+
+    <!-- Navigation -->
+    <nav class="max-w-7xl mx-auto mt-4 mb-8 flex gap-4 text-lg font-semibold">
+        <a href="index.html" class="underline">Home</a>
+        <a href="explore.html" class="underline">Explore a Text</a>
+        <a href="compare.html" class="underline">Compare Texts</a>
+        <a href="about.html" class="underline">About</a>
+        <label>
+            <input type="checkbox" id="dyslexia-toggle" />
+            Dyslexia-Friendly Font
+        </label>
+    </nav>
+
+<!-- Main Content -->
+<main class="max-w-4xl mx-auto space-y-10">
+
+    <!-- About the Tool -->
+    <section class="bg-white text-[#588B8B] p-6 rounded shadow space-y-4">
+        <h2 class="text-xl font-semibold">Kān Zamān</h2>
+        <p><a href="https://shorbatmaggie.github.io/kan-zaman/"
+            target="_blank" class="underline text-[#F0A7AD] font-medium">Kān Zamān</a> is a date converter for academics working on the Islamicate world. 
+            Users can convert an entire year range or a specific day using either Arabic-Indic and Western Arabic numerals as input (e.g. ١٢٣٤ and
+            1234). Converted dates display in English,
+            <a href="https://www.cambridge.org/core/journals/international-journal-of-middle-east-studies/information/author-resources/ijmes-translation-and-transliteration-guide"
+                target="_blank" class="underline text-[#F0A7AD] font-medium">IJMES</a> transliteration, and Arabic. 
+            </p>
+    </section>
+
+    <!-- About the Tool -->
+    <section class="bg-white text-[#588B8B] p-6 rounded shadow space-y-4">
+        <h2 class="text-xl font-semibold">Shorba Tools</h2>
+        <p>Shorba is a suite of visualization and analysis apps for researchers. In addition to <strong>Nasab</strong>, 
+            Shorba includes the following:</p>
+        <ul class="list-disc list-inside space-y-1">
+            <li><strong>Minhāj:</strong> a searchable database of over 30,000 digitized Arabic texts. 
+                Browse texts or find what you're looking for using utilities like exact match, fuzzy search, normalized 
+                queries that account for orthographic variation, root and lemma search, and clitic-aware search 
+                (e.g. search results for "كتاب"  will also include words like كتاب، الكتاب، بالكتاب، كتابهن). 
+            </li>
+            <ul class="list-disc list-inside space-y-1"></ul>
+            <li><strong>Naẓar:</strong> a visualization and annotation tool for comparing and analyzing Islamic legal texts. You can upload or import sources, 
+                sort them by subject, and display them chronologically to track development over time. Built-in tools include side-by-side text comparision (diffViewer), 
+                text reuse detection (passim), and recogito tools like multi-color highlighting, note-taking, and tagging. 
+                Then export your notes or sync them to airtable. 
+            </li>    
+        </ul>
+    </section>
+
+    <!-- Dyslexia toggle behavior -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const toggle = document.getElementById("dyslexia-toggle");
+      if (toggle) {
+        toggle.addEventListener("change", function () {
+          document.body.classList.toggle("dyslexic-mode", toggle.checked);
+        });
+      }
+    });
+  </script>
+
+</body>
+
+</html>
+

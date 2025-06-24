@@ -1,0 +1,14 @@
+{
+  "name": "ff3a18430120a410",
+  "main": "ff3a18430120a410@676.js",
+  "version": "676.0.0",
+  "homepage": "https://observablehq.com/d/ff3a18430120a410",
+  "author": {
+    "name": "shorbatmaggie",
+    "url": "https://observablehq.com/@shorbatmaggie"
+  },
+  "type": "module",
+  "peerDependencies": {
+    "@observablehq/runtime": "4 - 5"
+  }
+}
