@@ -167,7 +167,7 @@ function _dropdown(fullData) {
     const addBtn = document.createElement("button");
     addBtn.textContent = "Add Layer";
     addBtn.className = "ml-2 px-4 py-2 rounded shadow";
-    addBtn.style.backgroundColor = "#588B8B";
+    addBtn.style.backgroundColor = "#F0A7AD";
     addBtn.style.color = "white";
 
     // Added lineages display
