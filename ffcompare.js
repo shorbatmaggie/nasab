@@ -167,7 +167,7 @@ function _dropdown(fullData) {
     const addBtn = document.createElement("button");
     addBtn.textContent = "Add Layer";
     addBtn.className = "ml-2 px-4 py-2 rounded shadow";
-    addBtn.style.backgroundColor = "#F0A7AD";
+    addBtn.style.backgroundColor = "#588B8B";
     addBtn.style.color = "white";
 
     // Added lineages display
@@ -183,7 +183,7 @@ function _dropdown(fullData) {
         layersList.forEach((obj, idx) => {
             let selectedNode = flat.find(n => n.id === obj.selectedID);
             const badge = document.createElement("span");
-            badge.className = "inline-flex items-center bg-[#588B8B] text-white px-3 py-1 rounded-full text-sm";
+            badge.className = "inline-flex items-center bg-[#F0A7AD] text-white px-3 py-1 rounded-full text-sm";
             badge.textContent = selectedNode ? selectedNode.label : obj.selectedID;
             // Remove X button
             const x = document.createElement("button");
