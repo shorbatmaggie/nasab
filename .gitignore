@@ -10,5 +10,3 @@ node_modules/
 scripts/
 jsons/
 
-# Tailwind output
-css/tailwind-output.css
