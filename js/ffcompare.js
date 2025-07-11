@@ -441,7 +441,7 @@ function _renderChart(color, constructTangleLayout, _, svg, background_color, d3
 }
 
 function _fullData() {
-    return fetch("../jsons/commentaries_observable_nested.json")
+    return fetch("jsons/commentaries_observable_nested.json")
         .then(res => {
             if (!res.ok) throw new Error(`Failed to load JSON: ${res.status}`);
             return res.json();
