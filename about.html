@@ -7,7 +7,7 @@
 
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans&family=Noto+Naskh+Arabic&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="css/style.css">
 
   <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
@@ -19,7 +19,7 @@
       font-family: 'Noto Naskh Arabic', serif;
     }
     body.dyslexic-mode {
-      font-family: 'OpenDyslexic', sans-serif;
+      font-family: 'OpenDyslexic', sans-serif !important;
     }
   </style>
 </head>
@@ -41,7 +41,7 @@
     <a href="compare.html" class="underline">Compare Texts</a>
     <a href="more-tools.html" class="underline">More Tools</a>
     <label>
-      <input type="checkbox" id="dyslexiaToggle" />
+      <input type="checkbox" id="dyslexia-toggle" />
       Dyslexia-Friendly Font
     </label>
   </nav>
@@ -87,7 +87,7 @@
   <!-- Dyslexia toggle behavior -->
   <script>
     document.addEventListener("DOMContentLoaded", function () {
-      const toggle = document.getElementById("dyslexiaToggle");
+      const toggle = document.getElementById("dyslexia-toggle");
       if (toggle) {
         toggle.addEventListener("change", function () {
           document.body.classList.toggle("dyslexic-mode", toggle.checked);

@@ -183,7 +183,7 @@ function _dropdown(fullData) {
         layersList.forEach((obj, idx) => {
             let selectedNode = flat.find(n => n.id === obj.selectedID);
             const badge = document.createElement("span");
-            badge.className = "inline-flex items-center bg-[#F0A7AD] text-white px-3 py-1 rounded-full text-sm";
+            badge.className = "inline-flex items-center bg-[#588B8B] text-white px-3 py-1 rounded-full text-sm";
             badge.textContent = selectedNode ? selectedNode.label : obj.selectedID;
             // Remove X button
             const x = document.createElement("button");
@@ -441,7 +441,7 @@ function _renderChart(color, constructTangleLayout, _, svg, background_color, d3
 }
 
 function _fullData() {
-    return fetch("commentaries_observable_nested.json")
+    return fetch("jsons/commentaries_observable_nested.json")
         .then(res => {
             if (!res.ok) throw new Error(`Failed to load JSON: ${res.status}`);
             return res.json();
