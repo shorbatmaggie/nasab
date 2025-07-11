@@ -1,3 +1,4 @@
+
 /* OpenDyslexic Font Face */
 @font-face {
   font-family: 'OpenDyslexic';
@@ -22,6 +23,10 @@ body.dyslexia-mode h3,
 body.dyslexia-mode strong {
   font-weight: bold;
 }
+html body.dyslexia-mode {
+  /* Target body within html */
+  font-family: 'OpenDyslexic', sans-serif !important;
+}
 
 /* Force pink link color inside content */
 main a, section a, p a, div a {
@@ -43,4 +48,38 @@ body {
   margin: 0;
   padding: 0;
   overflow-x: auto;
+}
+
+body {
+  font-family: 'Noto Sans', sans-serif;
+  background-color: #F5F5F5;
+}
+
+.arabic {
+  font-family: 'Noto Naskh Arabic', serif;
+}
+
+header {
+  background-color: #588B8B;
+  color: white;
+}
+
+button {
+  background-color: #588B8B !important;
+  color: white !important;
+}
+
+section {
+  background-color: #FFFFFF !important;
+  color: #588B8B;
+}
+
+input,
+select {
+  background-color: #F5F5F5 !important;
+}
+
+nav a,
+nav label {
+  color: #F0A7AD !important;
 }

@@ -3,12 +3,29 @@
   "main": "ff3a18430120a410@676.js",
   "version": "676.0.0",
   "homepage": "https://observablehq.com/d/ff3a18430120a410",
-  "author": {
-    "name": "shorbatmaggie",
-    "url": "https://observablehq.com/@shorbatmaggie"
-  },
+  "author": "shorbatmaggie (https://observablehq.com/@shorbatmaggie)",
   "type": "module",
   "peerDependencies": {
     "@observablehq/runtime": "4 - 5"
+  },
+  "description": "",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tailwindcss -i ./css/tailwind-input.css -o ./css/tailwind-output.css",
+    "dev": "tailwindcss -i ./css/tailwind-input.css -o ./css/tailwind-output.css --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shorbatmaggie/nasab.git"
+  },
+  "keywords": [],
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/shorbatmaggie/nasab/issues"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.21",
+    "postcss": "^8.5.6",
+    "tailwindcss": "^3.4.1"
   }
 }

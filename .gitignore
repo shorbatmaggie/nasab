@@ -9,3 +9,6 @@ node_modules/
 # Private 
 scripts/
 jsons/
+
+# Tailwind output
+css/tailwind-output.css

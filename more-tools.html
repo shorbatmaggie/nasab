@@ -17,48 +17,22 @@
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/inspector.css" />
 
+    
+</head>
+
+<body class="p-6 font-sans">
+
     <style>
         body {
             font-family: 'Noto Sans', sans-serif;
             background-color: #F5F5F5;
         }
-
-        .arabic {
-            font-family: 'Noto Naskh Arabic', serif;
-        }
-
+    
         body.dyslexic-mode {
-            font-family: 'OpenDyslexic', sans-serif;
+            font-family: 'OpenDyslexic', sans-serif !important;
         }
-
-        header {
-            background-color: #588B8B;
-            color: white;
-        }
-
-        button {
-            background-color: #588B8B !important;
-            color: white !important;
-        }
-
-        section {
-            background-color: #FFFFFF !important;
-            color: #588B8B;
-        }
-
-        input,
-        select {
-            background-color: #F5F5F5 !important;
-        }
-
-        nav a,
-        nav label {
-            color: #F0A7AD !important;
-        }
-    </style>
-</head>
-
-<body class="p-6 font-sans">
+    
+        </style>
 
     <!-- Header -->
     <header class="p-6 rounded shadow">
@@ -94,26 +68,6 @@
             <a href="https://www.cambridge.org/core/journals/international-journal-of-middle-east-studies/information/author-resources/ijmes-translation-and-transliteration-guide"
                 target="_blank" class="underline text-[#F0A7AD] font-medium">IJMES</a> transliteration, and Arabic. 
             </p>
-    </section>
-
-    <!-- About the Tool -->
-    <section class="bg-white text-[#588B8B] p-6 rounded shadow space-y-4">
-        <h2 class="text-xl font-semibold">Shorba Tools</h2>
-        <p>Shorba is a suite of visualization and analysis apps for researchers. In addition to <strong>Nasab</strong>, 
-            Shorba includes the following:</p>
-        <ul class="list-disc list-inside space-y-1">
-            <li><strong>Minhāj:</strong> a searchable database of over 30,000 digitized Arabic texts. 
-                Browse texts or find what you're looking for using utilities like exact match, fuzzy search, normalized 
-                queries that account for orthographic variation, root and lemma search, and clitic-aware search 
-                (e.g. search results for "كتاب"  will also include words like كتاب، الكتاب، بالكتاب، كتابهن). 
-            </li>
-            <ul class="list-disc list-inside space-y-1"></ul>
-            <li><strong>Naẓar:</strong> a visualization and annotation tool for comparing and analyzing Islamic legal texts. You can upload or import sources, 
-                sort them by subject, and display them chronologically to track development over time. Built-in tools include side-by-side text comparision (diffViewer), 
-                text reuse detection (passim), and recogito tools like multi-color highlighting, note-taking, and tagging. 
-                Then export your notes or sync them to airtable. 
-            </li>    
-        </ul>
     </section>
 
     <!-- Dyslexia toggle behavior -->
